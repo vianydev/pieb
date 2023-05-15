@@ -21,8 +21,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
-@import url(./css/tokens.css);
-@import url(./css/colors.module.css);
+@import url(https://vianydev.github.io/pieb/wp-content/themes/piebco/css/tokens.css);
+@import url(https://vianydev.github.io/pieb/wp-content/themes/piebco/css/colors.module.css);
 
 html {
   color: var(--neutral-30);
@@ -448,7 +448,7 @@ html {
   background-blend-mode: soft-light;
   background-size: cover;
   background-position-x: center;
-  background-image: url('./images/banner/hero-area2.jpg');
+  background-image: url('https://vianydev.github.io/pieb/wp-content/themes/piebco/images/banner/hero-area2.jpg');
   height: 100vh;
   position: relative;
   display: flex;
@@ -555,17 +555,17 @@ Call To Action banners
 
 /* Video */
 .bg-church {
-  background-image: url("./images/backgrounds/bg-church.jpg");
+  background-image: url("https://vianydev.github.io/pieb/wp-content/themes/piebco/images/backgrounds/bg-church.jpg");
 }
 
 /* Missions */
 .bg-map {
-  background-image: url("./images/backgrounds/bg-map.jpg");
+  background-image: url("https://vianydev.github.io/pieb/wp-content/themes/piebco/images/backgrounds/bg-map.jpg");
 }
 
 /* Servir */
 .bg-service {
-  background-image: url("./images/backgrounds/bg-service.jpg");
+  background-image: url("https://vianydev.github.io/pieb/wp-content/themes/piebco/images/backgrounds/bg-service.jpg");
 }
 
 /*=================================================================

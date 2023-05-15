@@ -1,15 +1,3 @@
-<?php
-/**
- * The template for displaying the footer
- *
- * Contains the closing of the #content div and all content after.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package piebco
- */
-
-?>
 	<!-- <footer id="colophon" class="site-footer"> -->
 <!-- start Footer
 ========================================== -->
@@ -29,18 +17,8 @@
 						<!-- copyright -->
 						<div class="copyright text-center">
 							<!-- logo -->
-							<a class="navbar-brand logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-white.png" alt="<?php esc_attr_e( 'Home Page', 'textdmomain' );?>" />
-							</a>
-							<!-- /logo -->
-							<p class="mt-3">Designed &amp; Developed by <a href="https://vianydev.github.io/">vianydev ☕️</a></p>
-						</div>
-					</div> 
-				</div> 
-			</div> 
-		</footer> 
-
-	<?php wp_footer(); ?>
-	</body>
-</html>
-
+							<a class="navbar-brand logo" href="https://vianydev.github.io/pieb/wp-content/themes/piebco/<br />_<b>Fatal error</b>:  Uncaught Error: Call to undefined function esc_url() in /Users/vianey/Local Sites/pieb/app/public/wp-content/themes/piebco/footer.php:32_Stack trace:_#0 {main}_  thrown in <b>/Users/vianey/Local Sites/pieb/app/public/wp-content/themes/piebco/footer.php</b> on line <b>32</b><br />"></a>
+</div>
+</div>
+</div>
+</div></footer>

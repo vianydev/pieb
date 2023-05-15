@@ -1,35 +1,6 @@
-<?php
-/**
- * Template part for displaying results in search pages
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package piebco
- */
-
-?>
-
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php
-			piebco_posted_on();
-			piebco_posted_by();
-			?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-	<?php piebco_post_thumbnail(); ?>
-
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-
-	<footer class="entry-footer">
-		<?php piebco_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+<article id="post-<br />
+<b>Fatal error</b>:  Uncaught Error: Call to undefined function the_ID() in /Users/vianey/Local Sites/pieb/app/public/wp-content/themes/piebco/template-parts/content-search.php:12
+Stack trace:
+#0 {main}
+  thrown in <b>/Users/vianey/Local Sites/pieb/app/public/wp-content/themes/piebco/template-parts/content-search.php</b> on line <b>12</b><br />
+"></article>
