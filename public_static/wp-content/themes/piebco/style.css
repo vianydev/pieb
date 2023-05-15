@@ -1,0 +1,947 @@
+/*!
+Theme Name: piebco
+Theme URI: http://underscores.me/
+Author: vianydev
+Author URI: https://vianydev.github.io/
+Description: Design by VianyDev
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+Text Domain: piebco
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+piebco is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url(http://vianydev.github.io/pieb/wp-content/themes/piebco/css/tokens.css);
+@import url(http://vianydev.github.io/pieb/wp-content/themes/piebco/css/colors.module.css);
+
+html {
+  color: var(--neutral-30);
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+
+main {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+h1,
+h2,
+h3,
+h6 {
+  font-weight: 700;
+  /* font-weight: 400; */
+  /* font-family: 'Abril Fatface', cursive; */
+  font-family: 'Roboto', sans-serif;
+  color: var(--color-on-background);
+}
+
+h4,
+h5 {
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+  color: var(--neutral-30);
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+img {
+  border-style: none;
+}
+
+/*=================================================================
+  Basic Setup
+==================================================================*/
+::-moz-selection {
+  /* Code for Firefox */
+  background: var(--dark-purple);
+  color: var(--light-purple);
+}
+
+::selection {
+  background: var(--dark-purple);
+  color: var(--light-purple);
+}
+
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: var(--light-purple);
+  transition: all 0.3s ease-in 0s;
+}
+
+iframe {
+  border: 0;
+}
+
+a,
+a:focus,
+a:hover {
+  text-decoration: none;
+  outline: 0;
+}
+
+/* Forms
+	 ================================================= */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  overflow: visible;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* Inherit box-sizing to more easily change it's value on a component level.
+@link http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+.kill-margin-bottom {
+  margin-bottom: 0 !important;
+}
+
+.btn-transparent {
+  border: 1px solid var(--primary-purple) !important;
+  color: var(--primary-purple) !important;
+}
+
+.btn-blog {
+  border-bottom: 1px solid var(--light-purple) !important;
+  color: var(--primary-purple) !important;
+}
+
+.btn-transparent:hover,
+.btn-transparent:focus,
+.btn-blog:hover,
+.btn-blog:focus {
+  background-color: var(--primary-purple) !important;
+  border-color: var(--primary-purple) !important;
+  color: #fff !important;
+}
+
+.form-control {
+  border-radius: 0;
+  padding: 5px 10px;
+  border: 0 none;
+  color: var(--color-on-surface);
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0;
+}
+
+.form-control::-webkit-input-placeholder {
+  /*  Chrome, Safari, Opera  */
+  color: var(--neutral80);
+}
+
+.form-control:-moz-placeholder {
+  /* Firefox 18- */
+  color: var(--neutral80);
+}
+
+.form-control::-moz-placeholder {
+  /* Firefox 19+ */
+  color: var(--neutral80);
+}
+
+.form-control:-ms-input-placeholder {
+  /*  Internet Explorer  */
+  color: var(--neutral80);
+}
+
+.color {
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 50px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 50px 0;
+  }
+}
+
+.section-sm {
+  padding: 70px 0;
+}
+
+.section-xs {
+  padding: 50px 0;
+}
+
+#home {
+  position: relative;
+}
+
+.preloader {
+  background: #fff;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sk-cube-grid {
+  width: 40px;
+  height: 40px;
+}
+
+.sk-cube-grid .sk-cube {
+  width: 33%;
+  height: 33%;
+  background-color: var(--purple);
+  float: left;
+  -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+  animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+}
+
+.sk-cube-grid .sk-cube1 {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+.sk-cube-grid .sk-cube2 {
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+
+.sk-cube-grid .sk-cube3 {
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+.sk-cube-grid .sk-cube4 {
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+
+.sk-cube-grid .sk-cube5 {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+.sk-cube-grid .sk-cube6 {
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+
+.sk-cube-grid .sk-cube7 {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.sk-cube-grid .sk-cube8 {
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+
+.sk-cube-grid .sk-cube9 {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+@-webkit-keyframes sk-cubeGridScaleDelay {
+
+  0%,
+  70%,
+  100% {
+    transform: scale3D(1, 1, 1);
+  }
+
+  35% {
+    transform: scale3D(0, 0, 1);
+  }
+}
+
+@keyframes sk-cubeGridScaleDelay {
+
+  0%,
+  70%,
+  100% {
+    transform: scale3D(1, 1, 1);
+  }
+
+  35% {
+    transform: scale3D(0, 0, 1);
+  }
+}
+
+/* Titles */
+.title {
+  padding-bottom: 60px;
+}
+
+.title h2 {
+  font-weight: 500;
+  font-size: 38px;
+}
+
+.title h2 span {
+  color: var(--purple);
+}
+
+.title h3 {
+  font-size: 38px;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.slick-slide {
+  outline: none;
+}
+
+.content-cta p {
+  font-size: 20px !important;
+}
+
+/*=================================================================
+  Navigation
+==================================================================*/
+.navigation {
+  background-color: #fff;
+  width: 100%;
+  z-index: 399;
+  margin-bottom: 0;
+  padding: 10px;
+  position: sticky;
+  top: 0px;
+}
+
+.logo {
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.navigation .navigation-menu a {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  font-size: 16px;
+}
+
+/*=================================================================
+  Hero
+==================================================================*/
+.hero-area {
+  background-color: var(--dark-purple);
+  background-blend-mode: soft-light;
+  background-size: cover;
+  background-position-x: center;
+  background-image: url('http://vianydev.github.io/pieb/wp-content/themes/piebco/images/banner/hero-area2.jpg');
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-area .block {
+  text-align: center;
+  z-index: 99;
+}
+.hero-area .block i {
+  color: #fff;
+  font-size: 30px;
+}
+.hero-area .block h1 {
+  font-size: 50px;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.hero-area .block i:hover {
+  color: var(--color-secondary-container);
+}
+.hero-area .block p {
+  color: #fff;
+  font-size: 20px;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.hero-area .block .btn-transparent {
+  margin-top: 40px;
+  color: #fff;
+  border-color: #fff;
+  padding: 14px 50px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/*=================================================================
+  About us section
+==================================================================*/
+.about .block {
+  padding: 30px;
+  border-bottom: 2px solid transparent;
+  transition: 0.5s all;
+  margin-bottom: 20px;
+}
+
+.about .block:hover {
+  border-bottom: 2px solid var(--purple);
+}
+
+.about span {
+  font-weight: 400;
+  color: var(--primary-purple);
+}
+
+/*=================================================================
+Call To Action banners
+==================================================================*/
+.call-to-action {
+  background-color: var(--color-on-surface);
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.call-to-action h2 {
+  font-weight: 700;
+  color: var(--color-background);
+}
+
+.call-to-action p {
+  font-size: 16px;
+  color: var(--color-background);
+}
+
+/* VIDEO */
+.call-to-action .church-box {
+  padding: 60px 0;
+}
+
+.call-to-action .video-button a {
+  color: var(--primary-purple);
+  background: #fff;
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  border-radius: 50px;
+  line-height: 60px;
+  font-size: 30px;
+  margin-left: 3px;
+}
+
+.call-to-action .video-button a:hover {
+  color: var(--light-purple);
+  background-color: var(--dark-purple);
+}
+
+/* Video */
+.bg-church {
+  background-image: url("http://vianydev.github.io/pieb/wp-content/themes/piebco/images/backgrounds/bg-church.jpg");
+}
+
+/* Missions */
+.bg-map {
+  background-image: url("http://vianydev.github.io/pieb/wp-content/themes/piebco/images/backgrounds/bg-map.jpg");
+}
+
+/* Servir */
+.bg-service {
+  background-image: url("http://vianydev.github.io/pieb/wp-content/themes/piebco/images/backgrounds/bg-service.jpg");
+}
+
+/*=================================================================
+Contact Us
+==================================================================*/
+#contact-us {
+  padding-top: 50px;
+  color: var(--color-on-surface);
+  background: var(--color-surface);
+}
+
+.contact-form {
+  margin-bottom: 60px;
+}
+
+.contact-form .form-control {
+  margin: 5px 0;
+  border: 1px solid rgba(236, 239, 241, 0.07);
+  height: 45px;
+  width: 100% !important;
+  outline: var(--primary-purple) outset 1px;
+}
+
+.contact-form .form-control:focus-visible {
+  outline: var(--primary-purple) outset 1px;
+}
+
+.contact-form textarea.form-control {
+  padding: 10px;
+  height: 120px;
+}
+
+.contact-form input:hover,
+.contact-form textarea:hover {
+  border-color: var(--primary-purple);
+}
+
+.contact-info p {
+  margin-bottom: 25px;
+}
+
+.error {
+  display: none;
+  padding: 10px;
+  color: var(--color-error);
+  border-radius: 4px;
+  font-size: 13px;
+  background-color: var(--color-error-container);
+}
+
+.success {
+  background-color: #6cb670;
+  border-radius: 4px;
+  color: #fff;
+  display: none;
+  font-size: 13px;
+  padding: 10px;
+}
+
+/*=================================================================
+Crezcamos Page
+==================================================================*/
+.crezcamos-block {
+  height: 500px;
+  /* padding: 60px 20px; */
+  border-left: 1px solid rgba(236, 239, 241, 0.07);
+  border-top: 1px solid rgba(236, 239, 241, 0.07);
+  margin-bottom: 40px;
+  box-shadow: 2px 2px 5px rgba(44, 44, 44, 0.3), 13px 13px 0 rgba(255, 255, 255, 0.7);
+}
+
+.crezcamos-block .crezcamos-icon {
+  margin-bottom: 10px;
+  font-size: 50px;
+}
+
+/*=================================================================
+Grupos Page
+==================================================================*/
+.grupos-block .grupos-icon {
+  margin-bottom: 10px;
+  font-size: 50px;
+}
+
+/*=================================================================
+Schedule section
+==================================================================*/
+.schedule-block {
+  height: 300px;
+  padding: 60px 20px;
+  border-left: 1px solid rgba(236, 239, 241, 0.07);
+  border-top: 1px solid rgba(236, 239, 241, 0.07);
+  margin-bottom: 40px;
+  box-shadow: 2px 2px 5px rgba(44, 44, 44, 0.3), 13px 13px 0 rgba(255, 255, 255, 0.7);
+}
+
+.schedule-block .schedule-icon {
+  margin-bottom: 10px;
+  font-size: 50px;
+}
+
+.schedule-info-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.schedule-info {
+  display: flex;
+}
+
+.schedule-info p {
+  margin: 0 10px 0 5px;
+}
+
+.schedule-zoom {
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s ease 0s;
+}
+
+.schedule-zoom:hover {
+  transform: scale(1.05);
+}
+
+/*=================================================================
+Our Church
+==================================================================*/
+.our-church-box {
+  background-color: var(--color-background);
+}
+
+.our-church-box .content {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-content: space-evenly;
+}
+
+.our-church .our-church-box {
+  height: 430px;
+  margin-bottom: 20px;
+}
+
+.our-church .our-church-box:hover {
+  border-bottom: 2px solid var(--purple);
+}
+
+@media (max-width: 768px) {
+  .our-church .our-church-box {
+    height: 500px;
+  }
+}
+
+/*  Pastor info Lightbox     */
+/********************************/
+.lightbox-basic {
+  margin: 120px;
+  padding: 2rem 1.5rem 2rem 1.5rem;
+  border-radius: 0.25rem;
+  background: var(--color-background);
+  text-align: left;
+}
+
+.lightbox-basic .pastor-box {
+  align-items: center;
+}
+
+.lightbox-basic .image-container {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.lightbox-basic h3 {
+  margin-bottom: 0.5rem;
+}
+
+.lightbox-basic hr {
+  width: 2.5rem;
+  height: 0.125rem;
+  margin-top: 0;
+  margin-bottom: 0.875rem;
+  margin-left: 0;
+  border: 0;
+  background-color: #555;
+  text-align: left;
+}
+
+.lightbox-basic button.mfp-close.x-button {
+  position: absolute;
+  top: 120px;
+  right: 120px;
+  color: var(--neutral-70);
+}
+
+@media (max-width: 768px) {
+  .lightbox-basic {
+    margin: 60px 40px;
+  }
+
+  .lightbox-basic button.mfp-close.x-button {
+    top: 58px;
+    right: 40px;
+  }
+
+  .lightbox-basic .image-container img {
+    margin-bottom: 20px;
+  }
+}
+
+/*=================================================================
+  Missions section
+==================================================================*/
+.mission-info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.mission-info h3,
+.mission-info p {
+  color: var(--color-surface);
+  margin: 15px 0;
+  width: 55%;
+}
+
+.mission-info a {
+  margin: 15px 0;
+}
+
+/*=================================================================
+  Latest Posts
+==================================================================*/
+.post-block {
+  /* height: 500px; */
+  /* background-color: var(--color-on-surface); */
+  margin-bottom: 10px;
+  border: 1px solid var(--neutral40);
+}
+
+.post-block .entry-content p {
+  /* height: 148px; */
+  overflow: hidden;
+}
+
+.media-wrapper {
+  width: 100%;
+  /* border-bottom: 1px solid var(--neutral40); */
+}
+
+.all-post {
+  margin-top: 50px;
+}
+
+/*=================================================================
+  Footer section
+==================================================================*/
+#footer {
+  background-color: var(--color-on-surface) !important;
+}
+
+.social-icon {
+  padding: 60px 0 0 0;
+}
+
+.social-icon ul {
+  text-align: center;
+}
+
+.social-icon ul li:hover a {
+  background-color: var(--neutral-variant10);
+  transform: rotateY(0deg);
+}
+
+.social-icon ul li:hover a i {
+  color: var(--light-purple);
+  filter: alpha(opacity=100);
+  transform: rotateY(0deg);
+}
+
+.social-icon ul li a {
+  color: var(--light-purple);
+  background-color: var(--neutral-variant30);
+  border: 1px solid transparent;
+  display: block;
+  height: 70px;
+  width: 70px;
+  transform: rotateY(180deg);
+  transition: all 400ms ease-out 0s;
+}
+
+@media (max-width: 768px) {
+  .social-icon ul li a {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+.social-icon ul li a i {
+  display: inline-block;
+  font-size: 32px;
+  line-height: 70px;
+  margin: 0;
+  filter: alpha(opacity=30);
+  transform: rotateY(180deg);
+  transition: all 400ms ease-out 0s;
+}
+
+@media (max-width: 768px) {
+  .social-icon ul li a i {
+    line-height: 55px;
+    font-size: 25px;
+  }
+}
+
+.copyright {
+  padding: 20px 0;
+  color: #fff;
+}
+
+.copyright img {
+  margin-bottom: 15px;
+}
+
+.copyright p,
+.copyright a {
+  font-size: 14px;
+}
+
+.copyright a {
+  color: #aeffd3 !important;
+}
+
+.copyright a:hover {
+  color: #6610f2 !important;
+}
+
+#scrollUp {
+  border: 1px solid #4e595f;
+  bottom: 15px;
+  color: #fff;
+  display: none;
+  padding: 8px 12px;
+  position: fixed;
+  right: 20px;
+  z-index: 600;
+}
+
+#scrollUp:hover {
+  background-color: #57cbcc;
+  border: 1px solid #57cbcc;
+}
+
+/*# sourceMappingURL=style.css.map */
+
+/*=================================================================
+  404 section
+==================================================================*/
+.error-emoji {
+  display: flex;
+  justify-content: center;
+  font-size: 150px;
+}
+
+/*=================================================================
+  The post navigation section
+==================================================================*/
+.nav-links {
+  margin: 10px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-previous,
+.nav-next {
+  padding: 10px 20px;
+  color: var(--color-secondary-container) !important;
+}
